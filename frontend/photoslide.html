@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .main-carousel {
+            width: 600px;
+            margin-right: 20px;
+        }
+        .carousel-cell img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .carousel-nav {
+            display: flex;
+            flex-direction: column;
+            max-height: 400px; /* limit height to match main image */
+            overflow-y: hidden;
+        }
+        .carousel-nav .carousel-cell {
+            width: 100px;
+            height: 80px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .carousel-nav .carousel-cell img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .carousel-nav::-webkit-scrollbar {
+            display: none;
+        }
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .carousel-nav {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="slider-container d-flex">
+                    
+                    <div class="carousel-nav w-25">
+                        <div class="carousel-cell mb-2"><img src="../asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" alt="Image 1" class="img-fluid"></div>
+                        <div class="carousel-cell mb-2"><img src="path/to/image2.jpg" alt="Image 2" class="img-fluid"></div>
+                        <div class="carousel-cell mb-2"><img src="path/to/image3.jpg" alt="Image 3" class="img-fluid"></div>
+                        <div class="carousel-cell mb-2"><img src="path/to/image4.jpg" alt="Image 4" class="img-fluid"></div>
+                    </div>
+
+
+                    <div class="main-carousel w-75 mr-3">
+                        <div class="carousel-cell"><img src="../asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" alt="Image 1" class="img-fluid"></div>
+                        <div class="carousel-cell"><img src="path/to/image2.jpg" alt="Image 2" class="img-fluid"></div>
+                        <div class="carousel-cell"><img src="path/to/image3.jpg" alt="Image 3" class="img-fluid"></div>
+                        <div class="carousel-cell"><img src="path/to/image4.jpg" alt="Image 4" class="img-fluid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.main-carousel').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false,
+                fade: true,
+                asNavFor: '.carousel-nav'
+            });
+            $('.carousel-nav').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                asNavFor: '.main-carousel',
+                dots: false,
+                centerMode: true,
+                focusOnSelect: true,
+                vertical: true,
+                verticalSwiping: true,
+                infinite: true
+            });
+        });
+    </script>
+</body>
+</html>

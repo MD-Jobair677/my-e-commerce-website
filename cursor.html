@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            position: relative;
+            text-align: center;
+        }
+        
+        #facebook-icon {
+            width: 100px;
+            cursor: pointer;
+        }
+        
+        #hello-facebook {
+            position: absolute;
+            top: 120px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img id="facebook-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Icon">
+        <div id="hello-facebook" class="hidden">Hello Facebook</div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            const $facebookIcon = $('#facebook-icon');
+            const $helloFacebook = $('#hello-facebook');
+        
+            $facebookIcon.on('click', function(event) {
+                event.stopPropagation(); // Prevents the event from bubbling up to the body
+                $helloFacebook.toggleClass('hidden');
+
+                console.log('jjka')
+            });
+        
+            $(document).on('click', function() {
+                if (!$helloFacebook.hasClass('hidden')) {
+                    $helloFacebook.addClass('hidden');
+                }
+
+                console.log('helloo')
+
+            });
+        });
+        
+    </script>
+</body>
+</html>
+
+

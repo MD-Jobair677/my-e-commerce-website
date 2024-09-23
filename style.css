@@ -15,6 +15,9 @@ body{
   padding-top: 60px; 
 }
 
+body a{
+  text-decoration: none;
+}
 body.night-mode {
   background-color: #121212;
   color: #ffffff;
@@ -41,6 +44,12 @@ body.night-mode {
 }
 
 /* nav bar night mode end */
+
+
+
+
+
+
 
 
 .night-mode .card-body {
@@ -127,12 +136,7 @@ body.night-mode {
 
  }
 
- #drop{
-    background-color: aquamarine;
-    width: 60vw;
-    height: 40vh;
-    
- }
+
  .item{
     position: relative;
  }
@@ -195,8 +199,8 @@ body.night-mode {
   position: absolute;
   top: 1%;
   right: 2%;
-  /* transform: translate(-5%, -5%); */
-  color: white;
+  /* transform: translate(-5%, -5%); */ 
+  color: rgb(9, 18, 115);
   font-size: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;

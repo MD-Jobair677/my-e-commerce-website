@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="../style.css">
+       <!-- owl carousel css link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  
+<!-- owl carousel theme.css link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"/>
+
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .slider-container {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+        
+      }
+      .main-carousel {
+          width: 600px;
+          margin-right: 20px;
+      }
+      .carousel-cell img {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+      }
+      .carousel-nav {
+          display: flex;
+          flex-direction: column;
+          max-height: 400px; /* limit height to match main image */
+          overflow-y: hidden;
+      }
+      .carousel-nav .carousel-cell {
+          width: 100px;
+          height: 80px;
+          cursor: pointer;
+          margin-bottom: 10px;
+      }
+      .carousel-nav .carousel-cell img {
+          max-width: 100%;
+          max-height: 100%;
+      }
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .carousel-nav::-webkit-scrollbar {
+          display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .carousel-nav {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+      .custom-column{
+
+        margin-top: 20px;
+      }
+
+   
+        nav{
+          background-color: #081621;
+        }
+    
+       
+        
+       
+        
+
+
+
+
+  </style>
+
+
+</head>
+<body>
+
+
+
+  <nav class="fixed-top  navba p-3 shadow  bg-light">
+
+    <div class="container-fluid  ">
+
+      <div class="row ">
+
+
+
+
+
+     
+    <span class="col-1">  <i class="fa-solid fa-bars toogle-icon d-lg-none  d-sm-block "></i></span>
+    
+       
+
+        <span class="col-3   col-md-3  logo    ">
+          <img class="ml-2" src="/asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" alt="Company Logo" height="40">
+        </span>  
+
+
+
+        <!-- <span  class="col-2 col-md-4 d-lg-none d-block  "> -->
+          <!-- <i id="search-iconn" class="fa-solid fa-magnifying-glass"></i> -->
+
+          
+          <div  class="col-2 col-md-4 d-lg-none d-block  input-group-append  ">
+              <span id="search-iconn"  class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm "></i>
+              </span>
+          </div>
+          
+         <!-- </span> -->
+
+         
+
+      
+        <div id="navsearch" class="col-4    col-md-4  d-lg-block d-none search navsearch">
+
+         
+          
+
+          <form
+          class="">
+          <a class="input-group z-0">
+              <input type="text" class="form-control bg-light border-1 small" placeholder="Search for..."
+                  >
+              <div class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                      <i class="fas fa-search fa-sm"></i>
+                  </button>
+              </div>
+          </a>
+      </form>
+
+        </div>
+
+        <div class="col-6  col-md-4 account  text-center">
+
+
+
+           <!-- Right Section: Cart, Search, Night Mode -->
+           <div id="account" class="d-flex align-items-center justify-content-center ">
+
+            <a href="#">login</a>
+
+            <div class="nav-item position-relative">
+                <a href="#" class="text-light me-2 nav-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="badge bg-danger">2</span>
+                </a>
+            </div>
+           
+
+            <div class="profile  ">
+
+              <div class="profile-dropdown ">
+                <a  type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <div class="d-none " >auth </div>
+
+                  <img class="rounded-circle" src="/asset/image/cloth-2.jpg" alt="clouth" width="35px" height="35px">
+
+
+
+                  
+                </a>
+
+
+                <ul  class="dropdown-menu border shadow-lg" aria-labelledby="dropdownMenuButton1">
+                  <li><a class="dropdown-item" href="#">
+                    
+                    <div class="d-flex align-items-center   ">
+                      <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                      <span class="m-1">profile</span>
+                    </div>
+                    
+                    
+
+                  </a></li>
+                  <li><a class="dropdown-item" href="#">
+                    
+                    <i class="fas fa-cogs fa-sm fa-fw mr-5 text-gray-400"></i>
+                    Settings
+                
+
+                  </a></li>
+                  <li><a class="dropdown-item" href="#">
+                    
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Activity Log
+                    
+                
+
+                  </a></li>
+                  <li>
+                                  
+                    <a class="dropdown-item" href="#">
+
+                          
+                              <div class="d-flex justify-center align-items-center ">
+                              
+                              
+                                <div><i class="fas fa-sign-out-alt fa-sm fa-fw  text-gray-400"></i></div>
+                                 
+                              
+                
+                                    <div>
+                                       
+                                          
+
+                                            <input class=" outline-none" type="text" value="Sign out">
+                                       
+                                    </div>
+
+                            
+
+
+
+                        </a>
+                        
+                        
+                        </li>
+                 
+                </ul>
+              </div>
+
+            </div>
+
+            <div class="form-check form-switch">
+              <input class="form-check-input " type="checkbox" id="mode-toggle">
+          </div>
+
+
+
+          
+            
+          </div>
+           
+        </div>
+       
+
+      </div>
+
+      
+
+        
+        </div>
+
+
+
+
+    
+
+
+    </div>
+
+    </div>
+
+
+<!-- chach manu -->
+
+    
+   
+
+
+
+
+  </nav>
+
+
+
+  <div  class=" bg-secondary position2  shadow">
+
+    <div class="container m-auto">
+  
+      <div class=" d-flex  dropdown1">
+        <!-- Button trigger modal --> 
+  
+        <div class="dropdown">
+          <a class="  dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"  aria-expanded="false">
+            Dropdown link2
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">
+              
+              <div class="d-flex">
+                <span>hello</span>
+                <span>hello</span>
+              </div>
+  
+  
+            </a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+  
+  
+  
+  
+  
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown link
+          </a>
+        
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+  
+  
+  
+        </div>
+    
+    </div>
+   
+  </div>
+   
+
+
+<main>
+  
+
+    <!-- main section start -->
+    <div class="container " id="containerr">
+       <div class="card p-4 wrapper">
+        <div class="row">
+
+
+          <div class=" col-12 col-sm-6 col-md-5 col-lg-4 custom-column card">
+            <div class="slider-container d-flex gap-2 justify-content-between align-items-center ">
+                  
+              <div class="carousel-nav w-25">
+                      <div class="carousel-cell mb-2"><img src="../asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" alt="Image 1" class="img-fluid"></div>
+                      <div class="carousel-cell mb-2"><img src="../asset/image/cloth-2.jpg" alt="Image 2" class="img-fluid"></div>
+                      <div class="carousel-cell mb-2"><img src="path/to/image3.jpg" alt="Image 3" class="img-fluid"></div>
+                      <div class="carousel-cell mb-2"><img src="path/to/image4.jpg" alt="Image 4" class="img-fluid"></div>
+                  </div>
+
+
+                  <div class="main-carousel w-75 mr-3">
+                      <div class="carousel-cell"><img src="../asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" alt="Image 1" class="img-fluid"></div>
+                      <div class="carousel-cell"><img src="../asset/image/cloth-2.jpg" alt="Image 2" class="img-fluid"></div>
+                      <div class="carousel-cell"><img src="path/to/image3.jpg" alt="Image 3" class="img-fluid"></div>
+                      <div class="carousel-cell"><img src="path/to/image4.jpg" alt="Image 4" class="img-fluid"></div>
+                  </div>
+          </div>
+                
+              
+          </div>
+
+          
+
+
+          <div class="col-12 col-sm-6 col-md-7 col-lg-8  custom-column ">
+              <div class="card p-3">
+                  <h6 class="title">Brand name:</h6>
+                  <h6>Title</h6>
+                  <h4>Spiceal Price</h4>
+
+
+                  
+                  
+                  
+                    <div class="star-rating">
+                        <input type="radio" id="5-stars" name="rating" value="5" />
+                        <label for="5-stars" class="star">&#9733;</label>
+                        <input type="radio" id="4-stars" name="rating" value="4" />
+                        <label for="4-stars" class="star">&#9733;</label>
+                        <input type="radio" id="3-stars" name="rating" value="3" checked />
+                        <label for="3-stars" class="star">&#9733;</label>
+                        <input type="radio" id="2-stars" name="rating" value="2" />
+                        <label for="2-stars" class="star">&#9733;</label>
+                        <input type="radio" id="1-star" name="rating" value="1" />
+                        <label for="1-star" class="star">&#9733;</label>
+                    </div>
+            
+
+
+
+
+
+                  
+                  <div> 
+                      <span>$690</span> <span><del>$40</del></span>
+                  </div>
+
+                  <div>
+                      <p>Cash on Delivery available</p>
+                  </div>
+
+                 <div ">
+                  <button id="cart" type="button" class="btn ">Add to Cart</button>
+                          <button id="buy-now" type="button" class="btn">buy now</button>
+                 </div>
+
+
+                </div>
+
+          </div>
+
+           <!--  Comments Section start -->
+           <div class="mt-4">
+            <h5>Comments</h5>
+            <div class="media mb-3">
+                <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User Image">
+                <div class="media-body">
+                    <h6 class="mt-0">User Name</h6>
+                    This is a comment.
+                    <div class="mt-2">
+                        <a href="#" class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#reply1" aria-expanded="false" aria-controls="reply1">Reply</a>
+                    </div>
+                    <!-- Reply Form -->
+                    <div class="collapse mt-2" id="reply1">
+                        <div class="card card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="replyTextarea1">Your Reply</label>
+                                    <textarea class="form-control" id="replyTextarea1" rows="2" placeholder="Replay here...."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm">Submit Reply</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Replies -->
+                    <div class="media mt-3">
+                        <a class="pr-3" href="#">
+                            <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User Image">
+                        </a>
+                        <div class="media-body">
+                            <h6 class="mt-0">Reply User Name</h6>
+                            This is a reply to the comment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Comment Form -->
+            <form>
+                <div class="form-group">
+                    <label for="commentTextarea">Add a Comment</label>
+                    <textarea class="form-control" id="commentTextarea" rows="3" placeholder="Comment Heare....."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+            </form>
+        </div>
+
+
+            
+           <!--  Comments Section end -->
+
+
+
+
+
+      </div>
+       </div>
+        
+       
+        
+        
+
+    </div>
+    <div class="line"></div>
+    
+
+    <!-- all Brand start -->
+    <div class="line"></div>
+    <div class="container-fluid custom-container" id="containerr">
+        <div class="row">
+             <h1>Related Product</h1>
+             <div class="row">
+
+            <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-3 ">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8 ">
+                        <div class="card-body">
+                          <h5 class="card-title">Brand Name</h5>
+                          <p class="card-text">Available Item</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+            </div>
+            <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-3 ">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8 ">
+                        <div class="card-body">
+                          <h5 class="card-title">Brand Name</h5>
+                          <p class="card-text">Available Item</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+            </div>
+            <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-3 ">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8 ">
+                        <div class="card-body">
+                          <h5 class="card-title">Brand Name</h5>
+                          <p class="card-text">Available Item</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+            </div>
+            <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-3 ">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8 ">
+                        <div class="card-body">
+                          <h5 class="card-title">Brand Name</h5>
+                          <p class="card-text">Available Item</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+            </div>
+            <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-3 ">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8 ">
+                        <div class="card-body">
+                          <h5 class="card-title">Brand Name</h5>
+                          <p class="card-text">Available Item</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+            </div>
+            <div class="col-xm-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card mb-3 ">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src="./asset/image/07957cd0-f64e-4d8c-a15b-0731377b3e44.jpg" class="img-fluid rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8 ">
+                        <div class="card-body">
+                          <h5 class="card-title">Brand Name</h5>
+                          <p class="card-text">Available Item</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+                
+            </div>
+
+
+            
+            
+        </div>
+
+            
+        </div>
+
+    </div>
+
+  </main>
+
+    <!-- all barnd end -->
+
+   <!-- footer section start -->
+   <footer class="bg-dark text-white pt-4">
+    <div class="container-fluid m-auto">
+        <div class="row m-auto">
+            <div class="col-md-4 col-lg-2">
+                <h5>Column 1</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Link 1</a></li>
+                    <li><a href="#" class="text-white">Link 2</a></li>
+                    <li><a href="#" class="text-white">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h5>Column 2</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Link 1</a></li>
+                    <li><a href="#" class="text-white">Link 2</a></li>
+                    <li><a href="#" class="text-white">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h5>Column 3</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Link 1</a></li>
+                    <li><a href="#" class="text-white">Link 2</a></li>
+                    <li><a href="#" class="text-white">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h5>Column 4</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Link 1</a></li>
+                    <li><a href="#" class="text-white">Link 2</a></li>
+                    <li><a href="#" class="text-white">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h5>Column 5</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Link 1</a></li>
+                    <li><a href="#" class="text-white">Link 2</a></li>
+                    <li><a href="#" class="text-white">Link 3</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-lg-2">
+                <h5>Column 6</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white">Link 1</a></li>
+                    <li><a href="#" class="text-white">Link 2</a></li>
+                    <li><a href="#" class="text-white">Link 3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- footer section end -->
+
+
+
+
+
+    <!-- main section end -->
+
+<!-- fontawsom -->
+<script src="https://kit.fontawesome.com/1159b8e81c.js" crossorigin="anonymous"></script>
+
+
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- owl carousel js file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+
+    <script>
+        // future product
+        $(document).ready(function(){
+
+          $('.owl-carousel').owlCarousel({
+            loop: true,
+            autoplay:true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            margin:9,
+            items:6,
+            dots:false,
+            responsive:{
+              0:{
+                items:1
+              },
+              600:{
+                items:1
+              },
+              788:{
+                items:2
+
+              },
+              992:{
+                items:3
+
+              },
+              1351:{
+                items:4
+              }
+            }
+          });
+
+
+
+
+
+          // $('.owl-carousel.o').owlCarousel({
+          //   loop: true,
+          //   autoplay: false,
+          //   autoplayTimeout: 50000000,
+          //   autoplayHoverPause: true,
+          //   margin:20,
+          //   items:2,
+          //   dots:false,
+          //   responsive:{
+          //     0:{
+          //       items:1
+          //     },
+          //     600:{
+          //       items:3
+          //     },
+          //     1000:{
+          //       items:3
+          //     }
+          //   }
+          // });
+
+
+        });
+
+        // letaest product
+
+   
+
+      </script>
+
+<script>
+    $(document).ready(function(){
+      $('#buy-now').click(function(){
+        $(this).addClass('clicked'); // Add class when button is clicked
+      });
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $('.main-carousel').slick({
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              fade: true,
+              asNavFor: '.carousel-nav'
+          });
+          $('.carousel-nav').slick({
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              asNavFor: '.main-carousel',
+              dots: false,
+              centerMode: true,
+              focusOnSelect: true,
+              vertical: true,
+              verticalSwiping: true,
+              infinite: true
+          });
+      });
+  </script>
+
+  
+  <script>
+
+    $(document).ready(function(){
+      
+
+
+
+
+      $('.toogle-icon ').click(function(event){
+        event.stopPropagation()
+        $('.dropdown1').toggleClass('left-slider ' )
+
+       
+
+
+       
+
+
+      })
+
+
+
+    
+
+
+
+      
+
+      $('#filter_slide ').click(function(event){
+        event.stopPropagation()
+        console.log('hello')
+        $('#filter-card').toggleClass('filter-slid-toggle  d-block d-md-block' )
+
+
+
+      
+      })
+
+
+
+      $('#search-iconn ').click(function(){
+        
+
+       
+        $('#navsearch').toggleClass('navsearch d-none ' )
+
+
+
+
+        
+
+      })
+
+
+
+
+
+    })
+
+
+   
+
+</script>
+
+</body>
+</html>

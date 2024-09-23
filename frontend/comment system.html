@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Card with Comments</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container my-4">
+        <!-- Product Card -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://via.placeholder.com/400" class="card-img-top" alt="Product Image">
+            <div class="card-body">
+                <h5 class="card-title">Product Name</h5>
+                <p class="card-text">This is a brief description of the product. It gives an overview of what the product is about.</p>
+                <div class="d-flex justify-content-between align-items-center">
+
+
+
+                 
+
+
+
+
+
+
+                    <span class="font-weight-bold">$99.99</span>
+                    <a href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="mt-4">
+            <h5>Comments</h5>
+            <div class="media mb-3">
+                <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User Image">
+                <div class="media-body">
+                    <h6 class="mt-0">User Name</h6>
+                    This is a comment.
+                    <div class="mt-2">
+                        <a href="#" class="btn btn-sm btn-outline-primary" data-toggle="collapse" data-target="#reply1" aria-expanded="false" aria-controls="reply1">Reply</a>
+                    </div>
+                    <!-- Reply Form -->
+                    <div class="collapse mt-2" id="reply1">
+                        <div class="card card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="replyTextarea1">Your Reply</label>
+                                    <textarea class="form-control" id="replyTextarea1" rows="2"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm">Submit Reply</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Replies -->
+                    <div class="media mt-3">
+                        <a class="pr-3" href="#">
+                            <img src="https://via.placeholder.com/50" class="mr-3 rounded-circle" alt="User Image">
+                        </a>
+                        <div class="media-body">
+                            <h6 class="mt-0">Reply User Name</h6>
+                            This is a reply to the comment.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Comment Form -->
+            <form>
+                <div class="form-group">
+                    <label for="commentTextarea">Add a Comment</label>
+                    <textarea class="form-control" id="commentTextarea" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Comment</button>
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

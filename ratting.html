@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Rating</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .star-rating {
+      direction: rtl;
+      font-size: 1.5rem;
+    }
+    .star-rating input {
+      display: none;
+    }
+    .star-rating label {
+      color: #ddd;
+      font-size: 2rem;
+      padding: 0;
+      cursor: pointer;
+    }
+    .star-rating input:checked ~ label,
+    .star-rating input:hover ~ label,
+    .star-rating label:hover ~ label {
+      color: #f5c518;
+    }
+
+    .star-rating {
+        direction: rtl;
+        font-size: 1.5rem;
+      }
+      .star-rating input {
+        display: none;
+      }
+      .star-rating label {
+        color: #ddd;
+        font-size: 2rem;
+        padding: 0;
+        cursor: pointer;
+      }
+      .star-rating input:checked ~ label,
+      .star-rating input:hover ~ label,
+      .star-rating label:hover ~ label {
+        color: #f5c518;
+      }
+      
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Rate this Product</h2>
+    <div class="star-rating">
+      <input type="radio" id="5-stars5" name="rating" value="5" />
+      <label for="5-stars5" class="star">&#9733;</label>
+
+      <input type="radio" id="4-stars4" name="rating" value="4" />
+      <label for="4-stars4" class="star">&#9733;</label>
+
+      <input type="radio" id="3-stars3" name="rating" value="3" checked />
+      <label for="3-stars3" class="star">&#9733;</label>
+
+      <input type="radio" id="2-stars2" name="rating" value="2" />
+      <label for="2-stars2" class="star">&#9733;</label>
+
+      <input type="radio" id="1-star1" name="rating" value="1" />
+      <label for="1-star" class="star">&#9733;</label>
+    </div>
+  </div>
+
+  <div class="container mt-5">
+    <h2>Rate this Product</h2>
+    <div class="star-rating">
+      <input type="radio" id="5-stars" name="rating" value="5" />
+      <label for="5-stars" class="star">&#9733;</label>
+      <input type="radio" id="4-stars" name="rating" value="4" />
+      <label for="4-stars" class="star">&#9733;</label>
+      <input type="radio" id="3-stars" name="rating" value="3" checked />
+      <label for="3-stars" class="star">&#9733;</label>
+      <input type="radio" id="2-stars" name="rating" value="2" />
+      <label for="2-stars" class="star">&#9733;</label>
+      <input type="radio" id="1-star" name="rating" value="1" />
+      <label for="1-star" class="star">&#9733;</label>
+    </div>
+  </div>
+  <div class="container mt-5">
+    <h2>Rate this Product</h2>
+    <div class="star-rating">
+      <input type="radio" id="5-stars" name="rating" value="5" />
+      <label for="5-stars" class="star">&#9733;</label>
+      <input type="radio" id="4-stars" name="rating" value="4" />
+      <label for="4-stars" class="star">&#9733;</label>
+      <input type="radio" id="3-stars" name="rating" value="3" checked />
+      <label for="3-stars" class="star">&#9733;</label>
+      <input type="radio" id="2-stars" name="rating" value="2" />
+      <label for="2-stars" class="star">&#9733;</label>
+      <input type="radio" id="1-star" name="rating" value="1" />
+      <label for="1-star" class="star">&#9733;</label>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
